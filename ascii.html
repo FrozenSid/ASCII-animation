@@ -1,0 +1,71 @@
+<!--ALEX Homework 6 ASCIIanimation-->
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>ASCIImation</title>
+	<meta charset="UTF-8">
+	<link href="ascii.css" type="text/css" rel="stylesheet">
+	<script src="ascii.js" type="text/javascript"></script>
+	<script src="animations.js" type="text/javascript" ></script>
+</head>
+
+
+
+<body>
+	<h1>ASCII Animation Viewer </h1>
+
+	<textarea id="mytextarea" rows="20" cols="80" > </textarea>
+
+<!--DIV for all the fieldsets-->
+	<div id="fields">
+	
+<!--Play Controls Fieldset-->
+	<fieldset> 
+		<legend>Play Controls:</legend>
+			<button type="button" id="Start" onclick="StartAnimation()"> Start </button>
+			<button type="button" id="Stop" onclick="StopAnimation()" disabled> Stop </button>
+	</fieldset>
+
+	
+	
+<!--Animation Fieldset-->	
+	<fieldset>
+		<legend> Animation: </legend>
+			<select id="Animation" onchange="SelectAnimation()">
+				<option value="BLANK" selected="selected">Blank</option>
+				<option value="EXERCISE">Exercise</option>
+				<option value="JUGGLER">Juggler</option>
+				<option value="BIKE">Bike</option>
+				<option value="DIVE">Dive</option>
+				<option value="CUSTOM">Custom</option>
+			</select>
+	</fieldset>
+	
+	
+	
+<!--Size Fieldset-->
+	<fieldset>
+		<legend> Size: </legend>
+			<select id="Size" onchange="SelectSize()">
+				<option value="7pt">Tiny</option>
+				<option value="10pt">Small</option>
+				<option value="12pt" selected="selected">Medium</option>				
+				<option value="16pt">Large</option>
+				<option value="24pt">Extra Large</option>
+				<option value="32pt">XXL</option>
+			</select>
+	</fieldset>
+
+	
+<!--Speed Fieldset-->
+	<fieldset>
+		<legend> Speed: </legend>
+			<input type="checkbox" id="turbo" onchange="SelectTurbo()" disabled>Turbo</input>
+    </fieldset>
+	
+	</div> <!--End of Fieldsets DIV-->
+</body>
+</html>
